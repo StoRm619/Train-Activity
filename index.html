@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+​ ​
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="assets/css/reset.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css"> ​
+    <!--momentjs-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    ​
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    ​
+    <!-- Firebase Core JavaScript Link -->
+    <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-app.js"></script>
+    ​
+    <!-- Specific Firebase products we want (Database) -->
+    <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-database.js"></script>
+    ​
+</head>
+​ ​
+
+<body>
+    <div class="container">
+        ​
+        <div class="row headerRow">
+            <p class="headerText col-md-8">Employee Data Management</p>
+            ​
+        </div>
+        ​
+        <!--Box 1 container with preloaded trains and will append new train info-->
+        <div class="row scheduleRow">
+            <div class="card" id="trainDisplay" style="width: 100%; padding-bottom: 25px">
+                <div class="card-header">Current Employees</div>
+                <div class="row titleRow trainInfoRow">
+                    <div class="col-md-2">Employee name</div>
+                    <div class="col-md-2">Role</div>
+                    <div class="col-md-2">Start Date</div>
+                    <div class="col-md-2">Months Worked</div>
+                    <div class="col-md-2">Monthly Rate</div>
+                    <div class="col-md-2">Total Billed ($)</div>
+                </div>
+                ​
+            </div>
+        </div>
+        ​
+        <!--Box 2 container with inputs for new train information upon clicking of submit button-->
+        <div class="row addRow">
+            <div class="card" style="width: 100%; margin-top: 2%; padding-bottom: 15px; margin-bottom: 25px;">
+                <div class="card-header">Add Employee: </div>
+                <div class="row">
+                    <form class="inputContent" style="margin-top: 20px;">
+                        <div class="form-group">
+                            <label for="inputName" class="inputLabel">Employee name </label>
+                            <input type="text" class="form-control" id="inputName">
+                        </div>
+                    </form>
+                </div>
+                <div class="row">
+                    <form class="inputContent">
+                        <div class="form-group">
+                            <label for="inputrole" class="inputLabel">Role</label>
+                            <input type="text" class="form-control" id="inputrole">
+                        </div>
+                    </form>
+                </div>
+                <div class="row">
+                    <form class="inputContent">
+                        <div class="form-group">
+                            <label for="inputDate" class="inputLabel">Start Date mm/dd/yyyy</label>
+                            <input type="text" class="form-control" id="inputDate">
+                        </div>
+                    </form>
+                </div>
+                <div class="row">
+                    <form class="inputContent">
+                        <div class="form-group">
+                            <label for="inputRate" class="inputLabel">Monthly Rate</label>
+                            <input type="text" class="form-control" id="inputRate">
+                        </div>
+                    </form>
+                </div>
+                <div class="row buttonRow">
+                    <div class="col-md-3">
+                        <button id="submitButton">Submit</button>
+                    </div>
+                </div>
+            </div>
+            ​
+        </div>
+        ​
+        <script src="assets/javascript/app.js"></script>
+</body>
+​ ​
+
+</html>
